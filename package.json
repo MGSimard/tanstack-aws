@@ -46,7 +46,6 @@
     "drizzle-kit": "^0.31.8",
     "drizzle-orm": "^0.45.0",
     "highlight.js": "^11.11.1",
-    "lucide-react": "^0.544.0",
     "nitro": "npm:nitro-nightly@latest",
     "pg": "^8.16.3",
     "react": "^19.2.0",
@@ -56,11 +55,6 @@
     "zod": "^4.1.11"
   },
   "devDependencies": {
-    "@content-collections/core": "^0.13.1",
-    "@content-collections/markdown": "^0.1.4",
-    "@content-collections/mdx": "^0.2.2",
-    "@content-collections/vite": "^0.2.8",
-    "@tailwindcss/typography": "^0.5.16",
     "@tanstack/devtools-event-client": "^0.4.0",
     "@tanstack/devtools-vite": "^0.3.11",
     "@testing-library/dom": "^10.4.0",
@@ -73,8 +67,6 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "^16.0.0",
     "jsdom": "^27.0.0",
-    "remark-gfm": "^4.0.1",
-    "tsx": "^4.0.0",
     "typescript": "^5.7.2",
     "vite": "^7.1.7",
     "vite-tsconfig-paths": "^5.1.4",
