@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "azizziy.oklch-as",
+    "bradlc.vscode-tailwindcss",
+    "coderabbit.coderabbit-vscode",
+    "GitHub.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "motion.motion-vscode-extension",
+    "oxc.oxc-vscode",
+    "Postman.postman-for-vscode",
+    "YoavBls.pretty-ts-errors"
+  ]
+}
