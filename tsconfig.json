@@ -8,6 +8,12 @@
     "lib": ["ES2022", "DOM", "DOM.Iterable"], // Specify a set of bundled library declaration files that describe the target runtime environment.
     "types": ["vite/client"], // Specify type package names to be included without being referenced in a source file.
 
+    "paths": {
+      // Specify a set of entries that re-map imports to additional lookup locations.
+      "#/*": ["./src/*"],
+      "@/*": ["./src/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler", // Specify how TypeScript looks up a file from a given module specifier.
     "allowImportingTsExtensions": true, // Allow imports to include TypeScript file extensions. Requires `--moduleResolution bundler` and either `--noEmit` or `--emitDeclarationOnly` to be set.
@@ -31,10 +37,5 @@
     "noUncheckedIndexedAccess": true, // Add `undefined` to a type when accessed using an index.
     "noUncheckedSideEffectImports": true, // Check side effect imports.
     "useUnknownInCatchVariables": true, // Default catch clause variables as `unknown` instead of `any`.
-    "paths": {
-      // Specify a set of entries that re-map imports to additional lookup locations.
-      "#/*": ["./src/*"],
-      "@/*": ["./src/*"]
-    }
   }
 }
