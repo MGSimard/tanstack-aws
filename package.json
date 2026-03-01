@@ -14,7 +14,12 @@
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
     "db:pull": "drizzle-kit pull",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint --type-aware --type-check --report-unused-disable-directives",
+    "lint:fix": "oxlint --type-aware --type-check --report-unused-disable-directives --fix",
+    "lint:github": "oxlint --type-aware --type-check --report-unused-disable-directives --format=github"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
@@ -50,6 +55,7 @@
     "clsx": "^2.1.1",
     "drizzle-kit": "^0.31.9",
     "drizzle-orm": "^0.45.1",
+    "eslint-plugin-drizzle": "^0.2.3",
     "highlight.js": "^11.11.1",
     "nitro": "npm:nitro-nightly@3.0.1-20260227-181935-bfbb207c",
     "pg": "^8.19.0",
@@ -65,6 +71,8 @@
   "devDependencies": {
     "@tanstack/devtools-event-client": "^0.4.0",
     "@tanstack/devtools-vite": "^0.5.2",
+    "@tanstack/eslint-plugin-query": "^4.43.0",
+    "@tanstack/eslint-plugin-router": "^1.161.4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^25.3.3",
@@ -75,13 +83,16 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "dotenv": "^17.3.1",
     "jsdom": "^28.1.0",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
+    "oxlint-tsgolint": "^0.15.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18"
   },
-  "packageManager": "pnpm@10.30.0",
   "engines": {
     "node": ">=25.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.30.0"
 }

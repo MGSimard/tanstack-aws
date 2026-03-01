@@ -36,6 +36,6 @@
     "noFallthroughCasesInSwitch": true, // Enable error reporting for fallthrough cases in switch statements.
     "noUncheckedIndexedAccess": true, // Add `undefined` to a type when accessed using an index.
     "noUncheckedSideEffectImports": true, // Check side effect imports.
-    "useUnknownInCatchVariables": true, // Default catch clause variables as `unknown` instead of `any`.
+    "useUnknownInCatchVariables": true // Default catch clause variables as `unknown` instead of `any`.
   }
 }
