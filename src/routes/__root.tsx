@@ -5,7 +5,7 @@ import {
 } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import appCss from '../styles.css?url'
+import appCss from '@/css/global.css?url'
 
 import type { QueryClient } from '@tanstack/react-query'
 
@@ -48,8 +48,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body className="font-sans antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">
+
+      <div id="root">
           {children}
+          </div>
           <TanStackDevtools
+      
             config={{
               position: 'bottom-right',
             }}
