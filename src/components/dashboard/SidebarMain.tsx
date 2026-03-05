@@ -1,5 +1,6 @@
 import * as React from "react";
-import { SidebarSwitcher } from "@/components/dashboard/SidebarSwitcher";
+import { Link } from "@tanstack/react-router";
+
 import {
   Sidebar,
   SidebarContent,
@@ -16,6 +17,8 @@ import {
   SidebarMenuSubItem,
   SidebarMenuSubButton,
 } from "@/components/shadcnui/sidebar";
+import { SidebarSwitcher } from "@/components/dashboard/SidebarSwitcher";
+import { SidebarUser } from "@/components/dashboard/SidebarUser";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/shadcnui/collapsible";
 import {
   DropdownMenu,
@@ -24,9 +27,6 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from "@/components/shadcnui/dropdown-menu";
-import { SidebarUser } from "@/components/dashboard/SidebarUser";
-import { Link } from "@tanstack/react-router";
-import { useIsMobile } from "@/hooks/use-mobile";
 import {
   IconLayoutRows,
   IconWaveSine,
@@ -44,6 +44,7 @@ import {
   IconArrowForward,
   IconTrash,
 } from "@tabler/icons-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // This is sample data.
 const data = {
