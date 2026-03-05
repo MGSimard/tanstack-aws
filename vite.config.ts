@@ -12,6 +12,8 @@ const config = defineConfig({
   plugins: [
     devtools(),
     nitro({
+      // Default uses dynamic chunks for lazy loading code only when needed. This sometimes isn't ideal for performance.
+      inlineDynamicImports: true,
       awsLambda: { streaming: true },
       preset: "aws-lambda",
     }),

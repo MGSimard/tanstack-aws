@@ -4,8 +4,14 @@
 
 ## Useful Deployment Information
 
-- [Deploy TanStack Start serverless on AWS](https://johanneskonings.dev/blog/2025-11-30-tanstack-start-aws-serverless/)
+- [SST](https://sst.dev/docs/start/aws/tanstack/)
+
+- [TanStack AWS Examples](https://tanstack.com/showcase/9188cbc5-9ca4-4b92-a044-f26d5ffcc164) - https://tanstack-aws-examples.com/
+
+- [Deploy TanStack Start serverless on AWS](https://dev.to/aws-builders/deploy-tanstack-start-serverless-on-aws-4j7e)
+
 - [TanStack AI with AWS Bedrock on TanStack Start (simple example)](https://johanneskonings.dev/blog/2026-02-02-tanstack-ai-bedrock-simple/)
+
 - [Deploy Nitro apps to AWS Lambda](https://v3.nitro.build/deploy/providers/aws)
 
 https://github.com/JohannesKonings/tanstack-aws/
