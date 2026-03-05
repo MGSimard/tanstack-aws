@@ -2,6 +2,12 @@
 
 ---
 
+## DEPLOYMENT OPTIONS (All using Nitro):
+
+- SST - (https://sst.dev/docs/start/aws/tanstack/)
+- AWS CDK + LAMBDA - https://dev.to/aws-builders/deploy-tanstack-start-serverless-on-aws-4j7e
+- Amplify Hosting + Gen 2
+
 ## Useful Deployment Information
 
 - [SST](https://sst.dev/docs/start/aws/tanstack/)
