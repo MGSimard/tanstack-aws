@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.5); /* UI Debug mode */
+  outline: 1px solid rgba(255, 0, 0, 0.5) !important; /* UI Debug mode */
 }
 
 :root {
