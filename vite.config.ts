@@ -19,9 +19,7 @@ const config = defineConfig({
     }),
     tsconfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
-    tanstackStart({
-      srcDirectory: "src/webapp",
-    }),
+    tanstackStart(),
     viteReact({
       babel: {
         plugins: ["babel-plugin-react-compiler"],
