@@ -1,22 +1,15 @@
 import { defineConfig } from "vite";
 import { devtools } from "@tanstack/devtools-vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-
-import viteReact from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+import tailwindcss from "@tailwindcss/vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import viteReact from "@vitejs/plugin-react";
 
 const config = defineConfig({
   plugins: [
     devtools(),
-    nitro({
-      // Default uses dynamic chunks for lazy loading code only when needed. This sometimes isn't ideal for performance.
-      inlineDynamicImports: true,
-      awsLambda: { streaming: true },
-      preset: "aws-lambda",
-    }),
+    nitro(),
     tsconfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),

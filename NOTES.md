@@ -4,13 +4,16 @@
 
 ## DEPLOYMENT OPTIONS (All using Nitro):
 
-- SST - (https://sst.dev/docs/start/aws/tanstack/)
-- AWS CDK + LAMBDA - https://dev.to/aws-builders/deploy-tanstack-start-serverless-on-aws-4j7e
-- Amplify Hosting + Gen 2
+- [SST](https://sst.dev/docs/start/aws/tanstack/)
+  - Migrated from CDK/CloudFormation deployment engine to Pulumi/Terraform on v3 (2024)
+  - Now on v4
+
+- [CDK](https://dev.to/aws-builders/deploy-tanstack-start-serverless-on-aws-4j7e)
+  - CDK/CloudFormation - CloudFormation is slow and sucks, also fuck YAML
+
+- [Amplify]()
 
 ## Useful Deployment Information
-
-- [SST](https://sst.dev/docs/start/aws/tanstack/)
 
 - [TanStack AWS Examples](https://tanstack.com/showcase/9188cbc5-9ca4-4b92-a044-f26d5ffcc164) - https://tanstack-aws-examples.com/
 

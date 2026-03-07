@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": [".tanstack", ".output", "node_modules", "**/routeTree.gen.ts", "pnpm-lock.yaml"],
+  "ignorePatterns": ["**/routeTree.gen.ts", ".output", ".tanstack", "node_modules", "pnpm-lock.yaml"],
   "env": {
     "browser": true,
     "node": true,
