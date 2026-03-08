@@ -13,6 +13,7 @@ import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
 import { Route as LandingRouteRouteImport } from './routes/_landing/route'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as LandingIndexRouteImport } from './routes/_landing/index'
+import { Route as LandingPricingRouteImport } from './routes/_landing/pricing'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: '/dashboard',
@@ -33,13 +34,20 @@ const LandingIndexRoute = LandingIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LandingRouteRoute,
 } as any)
+const LandingPricingRoute = LandingPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => LandingRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof LandingIndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
+  '/pricing': typeof LandingPricingRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
+  '/pricing': typeof LandingPricingRoute
   '/': typeof LandingIndexRoute
   '/dashboard': typeof DashboardIndexRoute
 }
@@ -47,15 +55,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_landing': typeof LandingRouteRouteWithChildren
   '/dashboard': typeof DashboardRouteRouteWithChildren
+  '/_landing/pricing': typeof LandingPricingRoute
   '/_landing/': typeof LandingIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/dashboard/'
+  fullPaths: '/' | '/dashboard' | '/pricing' | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard'
-  id: '__root__' | '/_landing' | '/dashboard' | '/_landing/' | '/dashboard/'
+  to: '/pricing' | '/' | '/dashboard'
+  id:
+    | '__root__'
+    | '/_landing'
+    | '/dashboard'
+    | '/_landing/pricing'
+    | '/_landing/'
+    | '/dashboard/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,14 +108,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LandingIndexRouteImport
       parentRoute: typeof LandingRouteRoute
     }
+    '/_landing/pricing': {
+      id: '/_landing/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof LandingPricingRouteImport
+      parentRoute: typeof LandingRouteRoute
+    }
   }
 }
 
 interface LandingRouteRouteChildren {
+  LandingPricingRoute: typeof LandingPricingRoute
   LandingIndexRoute: typeof LandingIndexRoute
 }
 
 const LandingRouteRouteChildren: LandingRouteRouteChildren = {
+  LandingPricingRoute: LandingPricingRoute,
   LandingIndexRoute: LandingIndexRoute,
 }
 
