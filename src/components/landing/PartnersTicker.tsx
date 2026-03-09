@@ -1,19 +1,46 @@
-import { IconAWS, IconLinear, IconMicrosoft } from "@/components/landing/PartnerIcons";
+import {
+  IconCloudflare,
+  IconCursor,
+  IconLinear,
+  IconMicrosoft,
+  IconStripe,
+  IconVoidZero,
+  IconHTMX,
+} from "@/components/landing/PartnerIcons";
 
 const PARTNERS = [
   { name: "Microsoft", icon: IconMicrosoft },
-  { name: "AWS", icon: IconAWS },
   { name: "Linear", icon: IconLinear },
+  { name: "Cursor", icon: IconCursor },
+  { name: "Void Zero", icon: IconVoidZero },
+  { name: "Stripe", icon: IconStripe },
+  { name: "Cloudflare", icon: IconCloudflare },
+  { name: "HTMX", icon: IconHTMX },
 ] as const;
 
-// Meh TODO will figure out if I want a brutalist ticker or a dotted ticker
+const TICKER_COPIES = 4;
+const TICKER_DURATION = "20s";
 
 export function PartnersTicker() {
   return (
-    <div className="flex h-24 items-center gap-8 overflow-hidden bg-landing-primary py-6 *:h-full **:fill-landing-primary-foreground">
-      {PARTNERS.map((partner) => (
-        <partner.icon key={partner.name} aria-label={partner.name} />
-      ))}
+    <div
+      className="overflow-hidden bg-landing-primary"
+      style={{ "--ticker-copies": TICKER_COPIES, "--ticker-duration": TICKER_DURATION } as React.CSSProperties}>
+      <div className="animate-ticker flex h-24 w-max shrink-0 items-center gap-32 py-8 will-change-transform *:h-full *:shrink-0 **:fill-landing-primary-foreground">
+        {Array.from({ length: TICKER_COPIES }, (_, i) =>
+          PARTNERS.map((partner) => {
+            const Icon = partner.icon;
+            return (
+              <Icon
+                key={`${i}-${partner.name}`}
+                aria-label={partner.name}
+                role="img"
+                className={partner.name === "Void Zero" ? "p-1.5" : ""}
+              />
+            );
+          })
+        )}
+      </div>
     </div>
   );
 }

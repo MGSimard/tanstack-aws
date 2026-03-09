@@ -6,7 +6,7 @@
 
 /* UI Debug mode */
 /* * {
-  outline: 1px solid rgba(255, 0, 0, 0.5) !important;
+  outline: 1px solid rgba(0, 247, 255, 0.817) !important;
 } */
 
 :root {
@@ -223,6 +223,22 @@
   }
   button:not(:disabled) {
     cursor: pointer;
+  }
+}
+
+@layer animations {
+  @keyframes ticker {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% / var(--ticker-copies) - 2rem));
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-ticker {
+      animation: ticker var(--ticker-duration, 10s) linear infinite;
+    }
   }
 }
 
