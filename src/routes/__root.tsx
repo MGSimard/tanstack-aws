@@ -51,7 +51,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <TooltipProvider>
-          <div id="root" className="flex min-h-screen flex-col">
+          <div id="root" className="flex min-h-dvh flex-col">
             {children}
           </div>
         </TooltipProvider>
