@@ -55,18 +55,7 @@ export const Route = createFileRoute("/_landing/")({
 function PageHome() {
   return (
     <>
-      <section className="flex min-h-dvh flex-col justify-between pt-16">
-        <div className="flex flex-1 flex-col items-center justify-center">
-          <div>Some boxed label here</div>
-          <h1>Hero Section</h1>
-          <p>Key Problem, Key Solution</p>
-          <div>
-            <button type="button">Primary CTA</button>
-            <button type="button">Secondary CTA</button>
-          </div>
-        </div>
-        <div className="h-16 bg-yellow-500">Partners marquee/scroller here</div>
-      </section>
+      <HeroSection />
       <section>
         <h2>Partners Section</h2>
       </section>
@@ -89,5 +78,22 @@ function PageHome() {
         <h2>CTA Section</h2>
       </section>
     </>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section className="flex min-h-dvh flex-col justify-between pt-16">
+      <div className="flex flex-1 flex-col items-center justify-center">
+        <div>Some boxed label here</div>
+        <h1>Hero Section</h1>
+        <p>Key Problem, Key Solution</p>
+        <div>
+          <button type="button">Primary CTA</button>
+          <button type="button">Secondary CTA</button>
+        </div>
+      </div>
+      <div className="flex h-24 items-center overflow-hidden bg-yellow-500"></div>
+    </section>
   );
 }
