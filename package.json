@@ -56,6 +56,7 @@
     "drizzle-orm": "^0.45.1",
     "eslint-plugin-drizzle": "^0.2.3",
     "highlight.js": "^11.11.1",
+    "motion": "^12.35.1",
     "nitro": "npm:nitro-nightly@3.0.1-20260227-181935-bfbb207c",
     "pg": "^8.20.0",
     "react": "^19.2.4",
@@ -93,5 +94,5 @@
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@10.30.3"
+  "packageManager": "pnpm@10.31.0"
 }
