@@ -236,7 +236,8 @@
     display: block;
     max-width: 100%;
   }
-  button:not(:disabled) {
+  button:not(:disabled),
+  [role="menuitem"]:not(:disabled) {
     cursor: pointer;
   }
 }
