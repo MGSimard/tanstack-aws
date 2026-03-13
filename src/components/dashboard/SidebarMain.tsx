@@ -14,7 +14,7 @@ import {
 } from "@/components/shadcnui/sidebar";
 import { SidebarSwitcher } from "@/components/dashboard/SidebarSwitcher";
 import { SidebarUser } from "@/components/dashboard/SidebarUser";
-import { IconUsers, IconLogs, IconDashboard, IconSettings, IconLifebuoy } from "@tabler/icons-react";
+import { IconUsers, IconLogs, IconDashboard, IconSettings } from "@tabler/icons-react";
 
 const LINKS = {
   platform: {
