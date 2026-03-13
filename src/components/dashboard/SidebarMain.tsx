@@ -14,7 +14,7 @@ import {
 } from "@/components/shadcnui/sidebar";
 import { SidebarSwitcher } from "@/components/dashboard/SidebarSwitcher";
 import { SidebarUser } from "@/components/dashboard/SidebarUser";
-import { IconUsers, IconAdjustmentsHorizontal, IconLogs, IconDashboard } from "@tabler/icons-react";
+import { IconUsers, IconLogs, IconDashboard, IconSettings } from "@tabler/icons-react";
 
 const LINKS = {
   platform: {
@@ -39,7 +39,7 @@ const LINKS = {
       {
         name: "Settings",
         url: "/dashboard/settings",
-        icon: <IconAdjustmentsHorizontal />,
+        icon: <IconSettings />,
       },
       {
         name: "Audit Logs",
