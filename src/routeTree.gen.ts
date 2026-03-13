@@ -13,6 +13,9 @@ import { Route as DashboardRouteRouteImport } from './routes/dashboard/route'
 import { Route as LandingRouteRouteImport } from './routes/_landing/route'
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as LandingIndexRouteImport } from './routes/_landing/index'
+import { Route as DashboardExampleWideRouteImport } from './routes/dashboard/example-wide'
+import { Route as DashboardExamplePageRouteImport } from './routes/dashboard/example-page'
+import { Route as DashboardExampleCanvasRouteImport } from './routes/dashboard/example-canvas'
 import { Route as LandingPricingRouteImport } from './routes/_landing/pricing'
 
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
@@ -34,6 +37,21 @@ const LandingIndexRoute = LandingIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LandingRouteRoute,
 } as any)
+const DashboardExampleWideRoute = DashboardExampleWideRouteImport.update({
+  id: '/example-wide',
+  path: '/example-wide',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardExamplePageRoute = DashboardExamplePageRouteImport.update({
+  id: '/example-page',
+  path: '/example-page',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
+const DashboardExampleCanvasRoute = DashboardExampleCanvasRouteImport.update({
+  id: '/example-canvas',
+  path: '/example-canvas',
+  getParentRoute: () => DashboardRouteRoute,
+} as any)
 const LandingPricingRoute = LandingPricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -44,10 +62,16 @@ export interface FileRoutesByFullPath {
   '/': typeof LandingIndexRoute
   '/dashboard': typeof DashboardRouteRouteWithChildren
   '/pricing': typeof LandingPricingRoute
+  '/dashboard/example-canvas': typeof DashboardExampleCanvasRoute
+  '/dashboard/example-page': typeof DashboardExamplePageRoute
+  '/dashboard/example-wide': typeof DashboardExampleWideRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRoutesByTo {
   '/pricing': typeof LandingPricingRoute
+  '/dashboard/example-canvas': typeof DashboardExampleCanvasRoute
+  '/dashboard/example-page': typeof DashboardExamplePageRoute
+  '/dashboard/example-wide': typeof DashboardExampleWideRoute
   '/': typeof LandingIndexRoute
   '/dashboard': typeof DashboardIndexRoute
 }
@@ -56,19 +80,38 @@ export interface FileRoutesById {
   '/_landing': typeof LandingRouteRouteWithChildren
   '/dashboard': typeof DashboardRouteRouteWithChildren
   '/_landing/pricing': typeof LandingPricingRoute
+  '/dashboard/example-canvas': typeof DashboardExampleCanvasRoute
+  '/dashboard/example-page': typeof DashboardExamplePageRoute
+  '/dashboard/example-wide': typeof DashboardExampleWideRoute
   '/_landing/': typeof LandingIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/pricing' | '/dashboard/'
+  fullPaths:
+    | '/'
+    | '/dashboard'
+    | '/pricing'
+    | '/dashboard/example-canvas'
+    | '/dashboard/example-page'
+    | '/dashboard/example-wide'
+    | '/dashboard/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/pricing' | '/' | '/dashboard'
+  to:
+    | '/pricing'
+    | '/dashboard/example-canvas'
+    | '/dashboard/example-page'
+    | '/dashboard/example-wide'
+    | '/'
+    | '/dashboard'
   id:
     | '__root__'
     | '/_landing'
     | '/dashboard'
     | '/_landing/pricing'
+    | '/dashboard/example-canvas'
+    | '/dashboard/example-page'
+    | '/dashboard/example-wide'
     | '/_landing/'
     | '/dashboard/'
   fileRoutesById: FileRoutesById
@@ -108,6 +151,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LandingIndexRouteImport
       parentRoute: typeof LandingRouteRoute
     }
+    '/dashboard/example-wide': {
+      id: '/dashboard/example-wide'
+      path: '/example-wide'
+      fullPath: '/dashboard/example-wide'
+      preLoaderRoute: typeof DashboardExampleWideRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/example-page': {
+      id: '/dashboard/example-page'
+      path: '/example-page'
+      fullPath: '/dashboard/example-page'
+      preLoaderRoute: typeof DashboardExamplePageRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
+    '/dashboard/example-canvas': {
+      id: '/dashboard/example-canvas'
+      path: '/example-canvas'
+      fullPath: '/dashboard/example-canvas'
+      preLoaderRoute: typeof DashboardExampleCanvasRouteImport
+      parentRoute: typeof DashboardRouteRoute
+    }
     '/_landing/pricing': {
       id: '/_landing/pricing'
       path: '/pricing'
@@ -133,10 +197,16 @@ const LandingRouteRouteWithChildren = LandingRouteRoute._addFileChildren(
 )
 
 interface DashboardRouteRouteChildren {
+  DashboardExampleCanvasRoute: typeof DashboardExampleCanvasRoute
+  DashboardExamplePageRoute: typeof DashboardExamplePageRoute
+  DashboardExampleWideRoute: typeof DashboardExampleWideRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
 }
 
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
+  DashboardExampleCanvasRoute: DashboardExampleCanvasRoute,
+  DashboardExamplePageRoute: DashboardExamplePageRoute,
+  DashboardExampleWideRoute: DashboardExampleWideRoute,
   DashboardIndexRoute: DashboardIndexRoute,
 }
 

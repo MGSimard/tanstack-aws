@@ -1,15 +1,8 @@
 import { Outlet, createFileRoute } from "@tanstack/react-router";
-import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/shadcnui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/components/shadcnui/sidebar";
 import { AppSidebar } from "@/components/dashboard/SidebarMain";
-import { Separator } from "@/components/shadcnui/separator";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage,
-} from "@/components/shadcnui/breadcrumb";
+import { Header } from "@/components/dashboard/Header";
+import { Footer } from "@/components/dashboard/Footer";
 
 export const Route = createFileRoute("/dashboard")({
   component: LayoutDashboard,
@@ -20,26 +13,11 @@ function LayoutDashboard() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2">
-          <div className="flex items-center gap-2 px-4">
-            <SidebarTrigger className="-ml-1" />
-            <Separator orientation="vertical" className="mr-2 data-[orientation=vertical]:h-4" />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">Build Your Application</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        </header>
-        <main>
+        <Header />
+        <main className="flex flex-1 flex-col">
           <Outlet />
         </main>
+        <Footer />
       </SidebarInset>
     </SidebarProvider>
   );
