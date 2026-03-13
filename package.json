@@ -22,7 +22,7 @@
     "lint:github": "oxlint --type-aware --type-check --report-unused-disable-directives --format=github"
   },
   "dependencies": {
-    "@base-ui/react": "^1.2.0",
+    "@base-ui/react": "^1.3.0",
     "@faker-js/faker": "^10.3.0",
     "@modelcontextprotocol/sdk": "^1.27.1",
     "@t3-oss/env-core": "^0.13.10",
@@ -56,12 +56,12 @@
     "drizzle-orm": "^0.45.1",
     "eslint-plugin-drizzle": "^0.2.3",
     "highlight.js": "^11.11.1",
-    "motion": "^12.35.1",
+    "motion": "^12.36.0",
     "nitro": "npm:nitro-nightly@3.0.1-20260227-181935-bfbb207c",
     "pg": "^8.20.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "shadcn": "^4.0.0",
+    "shadcn": "^4.0.5",
     "streamdown": "^2.4.0",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.1",
