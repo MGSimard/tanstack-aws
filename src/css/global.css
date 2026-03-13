@@ -63,7 +63,7 @@
   --invert-foreground: var(--color-zinc-50);
   /* Landing Layout Tokens */
   --landing-background: oklch(0.9568 0.0029 128.49);
-  --landing-foreground: oklch(0.141 0.005 285.823);
+  --landing-foreground: oklch(0.2603 0 0);
   --landing-primary: oklch(0.6837 0.212 40.54);
   --landing-primary-foreground: oklch(0.2179 0.0184 30.34);
 }
@@ -112,7 +112,7 @@
   --invert-foreground: var(--color-zinc-50);
   /* Landing Page Tokens */
   --landing-background: oklch(0.2192 0.0049 145.41);
-  --landing-foreground: oklch(1 0 0);
+  --landing-foreground: oklch(0.9568 0.0029 128.49);
   --landing-primary: oklch(0.6837 0.212 40.54);
   --landing-primary-foreground: oklch(0.2179 0.0184 30.34);
 }

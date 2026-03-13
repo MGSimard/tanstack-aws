@@ -72,12 +72,16 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="relative flex min-h-dvh flex-col justify-between pt-16">
-      <div className="flex flex-1 flex-col items-center justify-center">
-        <span className="absolute top-4 left-4 font-pixel-line text-[clamp(2rem,10vw,10rem)] opacity-20" aria-hidden>
+      <div className="px-6 py-16 md:px-8">
+        <span
+          className="absolute top-4 left-4 -z-1 font-pixel-line text-[clamp(2rem,10vw,10rem)] opacity-20"
+          aria-hidden>
           NAME
         </span>
-        <div>Some boxed label here</div>
-        <h1>Hero Section</h1>
+        <span className="bg-landing-primary px-2 py-0.5 font-mono text-landing-background">IMPROVED CYBERSECURITY</span>
+        <h1 className="text-7xl font-bold tracking-tighter uppercase">
+          LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT
+        </h1>
         <p>Key Problem, Key Solution</p>
         <div>
           <button type="button">Primary CTA</button>
