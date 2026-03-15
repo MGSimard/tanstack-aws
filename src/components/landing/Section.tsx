@@ -9,7 +9,7 @@ interface SectionProps extends React.ComponentProps<"section"> {
 export function Section({ children, id, className, ...props }: SectionProps) {
   return (
     <section id={id} className={cn("px-6 md:px-8", className)} {...props}>
-      <div className="mx-auto max-w-7xl">{children}</div>
+      <div className="mx-auto max-w-360">{children}</div>
     </section>
   );
 }
