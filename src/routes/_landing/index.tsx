@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
+import { Section } from "@/components/landing/Section";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -71,14 +72,9 @@ function PageHome() {
 
 function HeroSection() {
   return (
-    <section className="relative flex min-h-dvh flex-col justify-between pt-16">
-      <div className="px-6 py-16 md:px-8">
-        <span
-          className="pointer-events-none absolute top-4 left-4 -z-1 font-pixel-line text-[clamp(2rem,10vw,10rem)] opacity-20 select-none"
-          aria-hidden>
-          NAME
-        </span>
-        <span className="bg-landing-primary px-2 py-0.5 font-mono text-landing-background">IMPROVED CYBERSECURITY</span>
+    <section className="flex min-h-dvh flex-col">
+      <div className="grid grow place-content-center gap-6 px-6 pt-16 md:px-8">
+        <span className="w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">TAG LABEL</span>
         <h1 className="text-7xl font-bold tracking-tighter uppercase">
           LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT
         </h1>
@@ -96,17 +92,17 @@ function HeroSection() {
 // TODO: scroll offset to account for fixed header when visiting anchor links
 function BenefitsSection() {
   return (
-    <section id="benefits" className="px-4 py-8">
+    <Section id="benefits" className="px-4 py-8">
       <span className="mb-2 bg-landing-primary px-2 py-0.5 font-mono text-landing-background tabular-nums">01</span>
       <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-primary">SOLVING [REDACTED]</h2>
       <p>Focus on how it helps user instead of what features it has</p>
-    </section>
+    </Section>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="grid grid-cols-2 bg-landing-primary px-4 py-8">
+    <Section id="how-it-works">
       <div>
         <span className="mb-2 bg-landing-background px-2 py-0.5 font-mono text-landing-primary tabular-nums">02</span>
         <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-background">
@@ -128,38 +124,38 @@ function HowItWorksSection() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </li>
       </ol>
-    </section>
+    </Section>
   );
 }
 
 function PricingSection() {
   return (
-    <section id="pricing">
+    <Section id="pricing">
       <h2>Pricing Section</h2>
-    </section>
+    </Section>
   );
 }
 
 function TestimonialsSection() {
   return (
-    <section id="testimonials">
+    <Section id="testimonials">
       <h2>Testimonials Section</h2>
-    </section>
+    </Section>
   );
 }
 
 function FAQSection() {
   return (
-    <section id="faq">
+    <Section id="faq">
       <h2>FAQ Section</h2>
-    </section>
+    </Section>
   );
 }
 
 function CTASection() {
   return (
-    <section id="cta">
+    <Section id="cta">
       <h2>CTA Section</h2>
-    </section>
+    </Section>
   );
 }

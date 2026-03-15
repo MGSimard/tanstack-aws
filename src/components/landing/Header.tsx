@@ -20,7 +20,7 @@ export function Header() {
       <div ref={refCallback} className="pointer-events-none h-px select-none" aria-hidden />
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-10 px-4 transition-colors duration-150",
+          "fixed inset-x-0 top-0 z-10 px-4 transition-colors duration-150 md:px-8",
           isScrolled && "bg-landing-background"
         )}>
         <nav className="flex h-16 items-center justify-between gap-4">

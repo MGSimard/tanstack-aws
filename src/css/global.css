@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /* UI Debug mode */
-/* * {
+* {
   outline: 1px solid rgba(255, 0, 0, 0.2) !important;
-} */
+}
 
 :root {
   /* Fonts */
@@ -64,7 +64,7 @@
   /* Landing Layout Tokens */
   --landing-background: oklch(0.9568 0.0029 128.49);
   --landing-foreground: oklch(0.2603 0 0);
-  --landing-primary: oklch(0.6837 0.212 40.54);
+  --landing-primary: oklch(0.56 0.1867 24.67);
   --landing-primary-foreground: oklch(0.2179 0.0184 30.34);
 }
 
@@ -113,7 +113,7 @@
   /* Landing Page Tokens */
   --landing-background: oklch(0.2192 0.0049 145.41);
   --landing-foreground: oklch(0.9568 0.0029 128.49);
-  --landing-primary: oklch(0.6837 0.212 40.54);
+  --landing-primary: oklch(0.56 0.1867 24.67);
   --landing-primary-foreground: oklch(0.2179 0.0184 30.34);
 }
 
