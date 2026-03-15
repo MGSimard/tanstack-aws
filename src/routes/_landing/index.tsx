@@ -1,8 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
 import { Section } from "@/components/landing/Section";
-import { Button } from "@/components/shadcnui/button";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -74,32 +73,44 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="flex min-h-dvh flex-col">
-      <div className="grid grow grid-cols-[minmax(0,40%)_minmax(0,1fr)] *:px-6 *:pt-32 *:pb-20 *:md:px-8">
-        <div className="flex flex-col justify-between gap-16">
+      <div className="grid grow grid-cols-1 md:grid-cols-[minmax(0,35%)_minmax(0,1fr)]">
+        <div className="flex flex-col justify-between gap-16 border-r px-6 pt-32 pb-20 md:px-16">
           <div>
             <span className="mb-4 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">
               TAG LABEL
             </span>
-            <h1 className="text-7xl font-bold tracking-tighter uppercase">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
+            <h1 className="text-[clamp(2rem,4vw,4rem)]/tight font-bold tracking-tighter uppercase">
+              LOREM IPSUM DOLOR SIT AMET CONSECTETUR
+            </h1>
           </div>
-          <div className="grid gap-6">
-            <p className="text-balance text-muted-foreground">
+          <div className="grid gap-6 text-lg">
+            <p className="text-muted-foreground">
               Cras dictum dolor vel eros congue, eget commodo dolor bibendum. Ut congue, est id varius congue, purus
               magna eleifend risus, et ullamcorper orci dui ut dui.
             </p>
-            <p className="text-balance">Etiam sed risus nec nibh scelerisque ullamcorper vitae id nisi.</p>
-            <div className="flex gap-4">
-              <Button type="button" size="lg">
+            <p>Etiam sed risus nec nibh scelerisque ullamcorper vitae id nisi.</p>
+            <div className="flex gap-4 font-mono *:flex *:h-12 *:items-center *:justify-center *:px-4 *:py-2">
+              <Link to="/" className="bg-landing-primary text-landing-primary-foreground">
                 PRIMARY CTA
-              </Button>
-              <Button type="button" variant="link" size="lg">
+              </Link>
+              <Link
+                to="/"
+                className="text-landing-primary hover:text-landing-primary hover:underline focus-visible:text-landing-primary focus-visible:underline">
                 LEARN MORE &gt;&gt;&gt;
-              </Button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="grid translate-z-0 place-items-center bg-[url('/assets/images/placeholder.webp')] bg-cover bg-center">
-          <span className="font-pixel-line text-[clamp(2rem,10vw,12rem)] text-white mix-blend-color-dodge">NAME</span>
+        <div className="grid translate-z-0 place-items-center bg-[url('/assets/images/placeholder.png')] bg-cover bg-center">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover"
+            poster="/assets/images/hero-poster.webp">
+            <source src="/assets/videos/hero-video.webm" type="video/webm" />
+          </video>
         </div>
       </div>
       <PartnersTicker />

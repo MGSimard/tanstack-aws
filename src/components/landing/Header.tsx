@@ -17,14 +17,14 @@ export function Header() {
 
   return (
     <>
-      <div ref={refCallback} className="pointer-events-none h-px select-none" aria-hidden />
+      <div ref={refCallback} className="pointer-events-none absolute top-0 h-0 opacity-0 select-none" aria-hidden />
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-10 px-4 transition-colors duration-150 md:px-8",
+          "fixed inset-x-0 top-0 z-10 px-4 font-mono uppercase transition-colors duration-150 md:px-16",
           isScrolled && "bg-landing-background"
         )}>
         <nav className="flex h-16 items-center gap-12">
-          <ul className="flex items-center gap-8 uppercase [&_a]:hover:underline [&_a]:focus-visible:underline">
+          <ul className="flex items-center gap-8 [&_a]:hover:underline [&_a]:focus-visible:underline">
             <li>
               <Link to="/">LOGO</Link>
             </li>
