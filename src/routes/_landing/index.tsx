@@ -85,7 +85,9 @@ function HeroSection() {
             <button type="button">Secondary CTA</button>
           </div>
         </div>
-        <div>Right column</div>
+        <div className="grid translate-z-0 place-items-center bg-[url('/assets/images/placeholder.webp')] bg-cover bg-center">
+          <span className="font-pixel-line text-[clamp(2rem,10vw,12rem)] text-white mix-blend-color-dodge">NAME</span>
+        </div>
       </div>
       <PartnersTicker />
     </section>
@@ -105,7 +107,7 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   return (
-    <Section id="how-it-works">
+    <Section id="how-it-works" className="bg-landing-primary">
       <div>
         <span className="mb-2 bg-landing-background px-2 py-0.5 font-mono text-landing-primary tabular-nums">02</span>
         <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-background">
