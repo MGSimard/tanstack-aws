@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
 import { Section } from "@/components/landing/Section";
+import { Button } from "@/components/shadcnui/button";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -73,16 +74,28 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="flex min-h-dvh flex-col">
-      <div className="grid grow grid-cols-[minmax(0,40%)_minmax(0,1fr)] *:px-6 *:py-16 *:md:px-8">
-        <div>
-          <span className="w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">TAG LABEL</span>
-          <h1 className="text-7xl font-bold tracking-tighter uppercase">
-            LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT
-          </h1>
-          <p>Key Problem, Key Solution</p>
+      <div className="grid grow grid-cols-[minmax(0,40%)_minmax(0,1fr)] *:px-6 *:pt-32 *:pb-20 *:md:px-8">
+        <div className="flex flex-col justify-between gap-16">
           <div>
-            <button type="button">Primary CTA</button>
-            <button type="button">Secondary CTA</button>
+            <span className="mb-4 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">
+              TAG LABEL
+            </span>
+            <h1 className="text-7xl font-bold tracking-tighter uppercase">LOREM IPSUM DOLOR SIT AMET CONSECTETUR</h1>
+          </div>
+          <div className="grid gap-6">
+            <p className="text-balance text-muted-foreground">
+              Cras dictum dolor vel eros congue, eget commodo dolor bibendum. Ut congue, est id varius congue, purus
+              magna eleifend risus, et ullamcorper orci dui ut dui.
+            </p>
+            <p className="text-balance">Etiam sed risus nec nibh scelerisque ullamcorper vitae id nisi.</p>
+            <div className="flex gap-4">
+              <Button type="button" size="lg">
+                PRIMARY CTA
+              </Button>
+              <Button type="button" variant="link" size="lg">
+                LEARN MORE &gt;&gt;&gt;
+              </Button>
+            </div>
           </div>
         </div>
         <div className="grid translate-z-0 place-items-center bg-[url('/assets/images/placeholder.webp')] bg-cover bg-center">
@@ -108,13 +121,11 @@ function BenefitsSection() {
 function HowItWorksSection() {
   return (
     <Section id="how-it-works" className="bg-landing-primary">
-      <div>
-        <span className="mb-2 bg-landing-background px-2 py-0.5 font-mono text-landing-primary tabular-nums">02</span>
-        <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-background">
-          HOW IT WORKS SECTION
-        </h2>
-        <p>Explain how to get started in 3 simple steps</p>
-      </div>
+      <span className="mb-2 bg-landing-background px-2 py-0.5 font-mono text-landing-primary tabular-nums">02</span>
+      <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-background">
+        HOW IT WORKS SECTION
+      </h2>
+      <p>Explain how to get started in 3 simple steps</p>
       <ol className="grid">
         <li>
           <h3>Step 1</h3>
