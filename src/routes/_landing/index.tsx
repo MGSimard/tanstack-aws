@@ -73,16 +73,19 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="flex min-h-dvh flex-col">
-      <div className="grid grow place-content-center gap-6 px-6 pt-16 md:px-8">
-        <span className="w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">TAG LABEL</span>
-        <h1 className="text-7xl font-bold tracking-tighter uppercase">
-          LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT
-        </h1>
-        <p>Key Problem, Key Solution</p>
+      <div className="grid grow grid-cols-[minmax(0,40%)_minmax(0,1fr)] *:px-6 *:py-16 *:md:px-8">
         <div>
-          <button type="button">Primary CTA</button>
-          <button type="button">Secondary CTA</button>
+          <span className="w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">TAG LABEL</span>
+          <h1 className="text-7xl font-bold tracking-tighter uppercase">
+            LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISCING ELIT
+          </h1>
+          <p>Key Problem, Key Solution</p>
+          <div>
+            <button type="button">Primary CTA</button>
+            <button type="button">Secondary CTA</button>
+          </div>
         </div>
+        <div>Right column</div>
       </div>
       <PartnersTicker />
     </section>
