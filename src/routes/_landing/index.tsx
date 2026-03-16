@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
 import { Section } from "@/components/landing/Section";
+import { Button } from "@/components/shadcnui/button";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -73,17 +74,15 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="flex min-h-dvh flex-col">
-      <div className="grid grow grid-cols-1 grid-rows-1 items-stretch [grid-template-areas:'stack'] *:[grid-area:stack] xl:grid-cols-[minmax(0,4fr)_minmax(0,6fr)] *:xl:[grid-area:unset]">
-        <div className="z-1 space-y-16 self-center px-12 py-32 text-center md:px-16 xl:text-start">
-          <div>
-            <span className="mx-auto mb-2 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background xl:mx-0 *:xl:text-shadow-none">
-              TAG LABEL
-            </span>
-            <h1 className="text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter uppercase xl:text-shadow-none dark:text-shadow-lg">
-              LOREM IPSUM DOLOR SIT AMET
-            </h1>
-          </div>
-          <div className="space-y-6">
+      <div className="mx-auto grid w-full max-w-400 grow grid-cols-1 [grid-template-areas:'stack'] *:[grid-area:stack] xl:grid-cols-[min(45%,48rem)_minmax(0,1fr)] *:xl:[grid-area:unset]">
+        <div className="z-1 self-center px-12 py-32 text-center md:px-16 xl:text-start">
+          <span className="mx-auto mb-2 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background xl:mx-0 *:xl:text-shadow-none">
+            TAG LABEL
+          </span>
+          <h1 className="mb-16 text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter uppercase xl:text-shadow-none dark:text-shadow-lg">
+            LOREM IPSUM DOLOR SIT AMET
+          </h1>
+          <div className="space-y-6 xl:mx-0">
             <p className="text-balance text-muted-foreground xl:text-shadow-none dark:text-shadow-sm">
               Cras dictum dolor vel eros congue, eget commodo dolor bibendum. Ut congue, est id varius congue.
             </p>
@@ -91,25 +90,31 @@ function HeroSection() {
               Etiam sed risus nec nibh scelerisque ullamcorper.
             </p>
             <div className="flex items-center justify-center gap-4 *:grid *:h-9 *:place-items-center *:px-4 xl:justify-start">
-              <Link to="/" className="bg-landing-primary font-mono tracking-widest text-landing-primary-foreground">
+              <Button
+                variant="default"
+                nativeButton={false}
+                className="rounded-none font-mono tracking-widest"
+                render={<Link to="/" />}>
                 PRIMARY
-              </Link>
-              <Link
-                to="/"
-                className="text-sm text-muted-foreground text-shadow-md hover:text-landing-primary hover:underline focus-visible:text-landing-primary focus-visible:underline xl:text-shadow-none">
-                Learn More &gt;&gt;&gt;
-              </Link>
+              </Button>
+              <Button
+                variant="link"
+                nativeButton={false}
+                className="rounded-none font-mono tracking-widest"
+                render={<Link to="/" />}>
+                LEARN MORE &gt;&gt;&gt;
+              </Button>
             </div>
           </div>
         </div>
-        <div className="relative h-full self-stretch overflow-hidden opacity-50 xl:opacity-100">
+        <div className="relative h-full self-stretch opacity-50 xl:opacity-100">
           <video
             autoPlay
             loop
             muted
             playsInline
             aria-label="Scanning animation of a dithered circular glyph"
-            className="absolute inset-0 size-full object-cover"
+            className="absolute inset-0 size-full overflow-visible object-cover"
             poster="/assets/images/hero-poster.webp">
             <source src="/assets/videos/hero-video.webm" type="video/webm" />
           </video>

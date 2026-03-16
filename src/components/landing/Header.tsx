@@ -24,7 +24,7 @@ export function Header() {
           "fixed inset-x-0 top-0 z-10 px-6 font-mono uppercase shadow-sm shadow-transparent transition-all duration-150 md:px-8",
           isScrolled && "bg-background shadow-black"
         )}>
-        <nav className="flex h-16 items-center gap-12">
+        <nav className="mx-auto flex h-16 max-w-400 items-center gap-12">
           <ul className="flex items-center gap-8 font-light [&_a]:hover:underline [&_a]:focus-visible:underline">
             <li>
               <Link to="/">LOGO</Link>
@@ -42,18 +42,13 @@ export function Header() {
           <div className="ml-auto flex items-center gap-4">
             <ThemeSelect />
             <Button
-              type="button"
               variant="outline"
               nativeButton={false}
               className="rounded-none tracking-widest"
               render={<Link to="/" />}>
               DEMO
             </Button>
-            <Button
-              type="button"
-              nativeButton={false}
-              className="rounded-none tracking-widest"
-              render={<Link to="/dashboard" />}>
+            <Button nativeButton={false} className="rounded-none tracking-widest" render={<Link to="/dashboard" />}>
               ACCESS
             </Button>
             <MobileNavDropdown />
