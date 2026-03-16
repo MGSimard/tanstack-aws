@@ -114,7 +114,7 @@ function HeroSection() {
             muted
             playsInline
             aria-label="Scanning animation of a dithered circular glyph"
-            className="absolute inset-0 size-full overflow-visible object-cover"
+            className="absolute inset-0 size-full overflow-visible object-cover invert dark:invert-0"
             poster="/assets/images/hero-poster.webp">
             <source src="/assets/videos/hero-video.webm" type="video/webm" />
           </video>
