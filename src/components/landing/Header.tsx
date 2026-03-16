@@ -24,7 +24,7 @@ export function Header() {
           isScrolled && "bg-landing-background"
         )}>
         <nav className="flex h-16 items-center gap-12">
-          <ul className="flex items-center gap-8 [&_a]:hover:underline [&_a]:focus-visible:underline">
+          <ul className="flex items-center gap-8 font-light [&_a]:hover:underline [&_a]:focus-visible:underline">
             <li>
               <Link to="/">LOGO</Link>
             </li>

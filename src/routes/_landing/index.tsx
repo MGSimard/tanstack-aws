@@ -73,8 +73,8 @@ function PageHome() {
 function HeroSection() {
   return (
     <section className="flex min-h-dvh flex-col">
-      <div className="grid grow grid-cols-1 md:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
-        <div className="flex flex-col justify-center gap-16 px-6 pt-32 pb-20 md:px-16">
+      <div className="grid grow grid-cols-1 [grid-template-areas:'stack'] md:grid-cols-[minmax(0,40%)_minmax(0,1fr)]">
+        <div className="flex flex-col justify-center gap-16 px-6 pt-32 pb-20 [grid-area:stack] md:px-16 lg:[grid-area:unset]">
           <div>
             <span className="mb-4 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background">
               TAG LABEL
@@ -89,7 +89,7 @@ function HeroSection() {
               magna eleifend risus, et ullamcorper orci dui ut dui.
             </p>
             <p className="text-balance">Etiam sed risus nec nibh scelerisque ullamcorper vitae id nisi.</p>
-            <div className="flex gap-4 font-mono *:flex *:h-12 *:items-center *:justify-center *:px-4 *:py-2">
+            <div className="flex gap-4 font-mono *:flex *:h-9 *:items-center *:justify-center *:px-4 *:py-2">
               <Link to="/" className="bg-landing-primary font-mono text-landing-primary-foreground">
                 PRIMARY
               </Link>
@@ -101,7 +101,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="[grid-area:stack] lg:[grid-area:unset]">
           <video
             autoPlay
             loop
