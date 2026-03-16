@@ -79,17 +79,17 @@ function HeroSection() {
           <span className="mx-auto mb-2 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background xl:mx-0 *:xl:text-shadow-none">
             TAG LABEL
           </span>
-          <h1 className="mb-16 text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter uppercase xl:text-shadow-none dark:text-shadow-lg">
+          <h1 className="mx-auto mb-16 max-w-3xl text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter uppercase xl:mx-0 xl:text-shadow-none dark:text-shadow-lg">
             LOREM IPSUM DOLOR SIT AMET
           </h1>
-          <div className="space-y-6 xl:mx-0">
+          <div className="mx-auto max-w-2xl space-y-6 xl:mx-0">
             <p className="text-balance text-muted-foreground xl:text-shadow-none dark:text-shadow-sm">
               Cras dictum dolor vel eros congue, eget commodo dolor bibendum. Ut congue, est id varius congue.
             </p>
             <p className="text-balance xl:text-shadow-none dark:text-shadow-sm">
               Etiam sed risus nec nibh scelerisque ullamcorper.
             </p>
-            <div className="flex items-center justify-center gap-4 *:grid *:h-9 *:place-items-center *:px-4 xl:justify-start">
+            <div className="grid items-center justify-center gap-4 *:grid *:h-9 *:place-items-center *:px-4 xl:flex xl:flex-row xl:justify-start">
               <Button
                 variant="default"
                 nativeButton={false}
