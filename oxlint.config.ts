@@ -1,13 +1,19 @@
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": ["**/routeTree.gen.ts", ".output", ".tanstack", "node_modules", "pnpm-lock.yaml"],
-  "env": {
-    "browser": true,
-    "node": true,
-    "builtin": true
+import { defineConfig } from "oxlint";
+
+export default defineConfig({
+  ignorePatterns: ["**/routeTree.gen.ts", ".output", ".tanstack", "node_modules", "pnpm-lock.yaml"],
+  env: {
+    browser: true,
+    node: true,
+    builtin: true,
   },
-  "globals": {},
-  "plugins": [
+  globals: {},
+  options: {
+    typeAware: true,
+    typeCheck: true,
+  },
+  categories: {},
+  plugins: [
     "eslint",
     "import",
     "jsdoc",
@@ -19,23 +25,47 @@
     "react-perf",
     "typescript",
     "unicorn",
-    "vitest"
+    "vitest",
   ],
-  "jsPlugins": ["@tanstack/eslint-plugin-router", "@tanstack/eslint-plugin-query", "eslint-plugin-drizzle"],
-  "categories": {},
-  "rules": {
+  jsPlugins: ["@tanstack/eslint-plugin-router", "@tanstack/eslint-plugin-query", "eslint-plugin-drizzle"],
+  settings: {
+    "jsx-a11y": {
+      polymorphicPropName: undefined,
+      components: {},
+      attributes: {},
+    },
+    react: {
+      formComponents: [],
+      linkComponents: [],
+      version: undefined,
+    },
+    jsdoc: {
+      ignorePrivate: false,
+      ignoreInternal: false,
+      ignoreReplacesDocs: true,
+      overrideReplacesDocs: true,
+      augmentsExtendsReplacesDocs: false,
+      implementsReplacesDocs: false,
+      exemptDestructuredRootsFromChecks: false,
+      tagNamePreference: {},
+    },
+    vitest: {
+      typecheck: false,
+    },
+  },
+  rules: {
     "@tanstack/router/create-route-property-order": "error",
     "drizzle/enforce-delete-with-where": [
       "error",
       {
-        "drizzleObjectName": ["db", "ctx.db"]
-      }
+        drizzleObjectName: ["db", "ctx.db"],
+      },
     ],
     "drizzle/enforce-update-with-where": [
       "error",
       {
-        "drizzleObjectName": ["db", "ctx.db"]
-      }
+        drizzleObjectName: ["db", "ctx.db"],
+      },
     ],
     "constructor-super": "warn",
     "for-direction": "warn",
@@ -104,7 +134,7 @@
     "oxc/number-arg-out-of-range": "warn",
     "oxc/only-used-in-recursion": "warn",
     "oxc/uninvoked-array-callback": "warn",
-    "typescript/array-type": ["warn", { "default": "generic" }],
+    "typescript/array-type": ["warn", { default: "generic" }],
     "typescript/await-thenable": "warn",
     "typescript/no-array-delete": "warn",
     "typescript/no-base-to-string": "warn",
@@ -142,31 +172,6 @@
     "unicorn/no-useless-length-check": "warn",
     "unicorn/no-useless-spread": "warn",
     "unicorn/prefer-set-size": "warn",
-    "unicorn/prefer-string-starts-ends-with": "warn"
+    "unicorn/prefer-string-starts-ends-with": "warn",
   },
-  "settings": {
-    "jsx-a11y": {
-      "polymorphicPropName": null,
-      "components": {},
-      "attributes": {}
-    },
-    "react": {
-      "formComponents": [],
-      "linkComponents": [],
-      "version": null
-    },
-    "jsdoc": {
-      "ignorePrivate": false,
-      "ignoreInternal": false,
-      "ignoreReplacesDocs": true,
-      "overrideReplacesDocs": true,
-      "augmentsExtendsReplacesDocs": false,
-      "implementsReplacesDocs": false,
-      "exemptDestructuredRootsFromChecks": false,
-      "tagNamePreference": {}
-    },
-    "vitest": {
-      "typecheck": false
-    }
-  }
-}
+});
