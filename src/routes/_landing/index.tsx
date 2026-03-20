@@ -136,7 +136,7 @@ function HeroSection() {
 function BenefitsSection() {
   return (
     <Section id="benefits" label="01 &gt;&gt; BENEFITS" heading="BENEFITS HEADING">
-      <p>Focus on how it helps user instead of what features it has.</p>
+      <p className="text-muted-foreground">Focus on how it helps user instead of what features it has.</p>
     </Section>
   );
 }
@@ -144,7 +144,7 @@ function BenefitsSection() {
 function HowItWorksSection() {
   return (
     <Section id="how-it-works" variant="primary" label="02 &gt;&gt; HOW IT WORKS" heading="HOW IT WORKS HEADING">
-      <p>Explain how to get started in 3 simple steps.</p>
+      <p className="text-muted-foreground">Explain how to get started in 3 simple steps.</p>
     </Section>
   );
 }
@@ -152,7 +152,7 @@ function HowItWorksSection() {
 function PricingSection() {
   return (
     <Section id="pricing" label="03 &gt;&gt; PRICING" heading="PRICING HEADING">
-      <p>
+      <p className="text-muted-foreground">
         Helps users choose by showcasing difference in plans, don't hide anything. Add CTA to all plans and highlight
         the middle plan to guide users.
       </p>
@@ -163,7 +163,7 @@ function PricingSection() {
 function TestimonialsSection() {
   return (
     <Section id="testimonials" label="04 &gt;&gt; TESTIMONIALS" heading="TESTIMONIALS HEADING">
-      <p>
+      <p className="text-muted-foreground">
         Place next to pricing to help with conversions. People feel relieved to see other people happy with their
         purchase.
       </p>
@@ -174,7 +174,14 @@ function TestimonialsSection() {
 function FAQSection() {
   return (
     <Section id="faq" label="05 &gt;&gt; FREQUENTLY ASKED QUESTIONS" heading="FAQ HEADING">
-      <p>Address some major questions to help people make the final call. (e.g., Cancellation/Refund policies, etc.)</p>
+      <p className="mb-2 text-muted-foreground">
+        Can't find what you're looking for?{" "}
+        <Link
+          to="/"
+          className="inline-flex items-center gap-1 font-mono underline hover:text-landing-primary focus-visible:text-landing-primary">
+          Contact us &gt;&gt;&gt;
+        </Link>
+      </p>
       <Accordion items={ACCORDION_ITEMS} />
     </Section>
   );
@@ -215,7 +222,7 @@ const ACCORDION_ITEMS = [
 function CTASection() {
   return (
     <Section id="cta" label="06 &gt;&gt; CTA" heading="CTA Heading">
-      <p>Highlight it, make it stand out.</p>
+      <p className="text-muted-foreground">Highlight it, make it stand out.</p>
     </Section>
   );
 }
