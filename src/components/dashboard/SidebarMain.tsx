@@ -64,6 +64,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               {LINKS.platform.items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
+                    tooltip={item.title}
                     render={
                       <Link
                         to={item.url}
@@ -80,12 +81,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>{LINKS.management.label}</SidebarGroupLabel>
+          <SidebarGroupLabel className="pointer-events-none">{LINKS.management.label}</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {LINKS.management.items.map((item) => (
                 <SidebarMenuItem key={item.name}>
-                  <SidebarMenuButton render={<Link to={item.url} activeProps={{ "data-active": true }} />}>
+                  <SidebarMenuButton
+                    tooltip={item.name}
+                    render={<Link to={item.url} activeProps={{ "data-active": true }} />}>
                     {item.icon}
                     <span>{item.name}</span>
                   </SidebarMenuButton>
