@@ -136,8 +136,10 @@ function HeroSection() {
 function BenefitsSection() {
   return (
     <Section id="benefits">
-      <span className="mb-2 bg-landing-primary px-2 py-0.5 font-mono text-landing-background tabular-nums">01</span>
-      <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-primary">SOLVING [REDACTED]</h2>
+      <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+        01 &gt;&gt; BENEFITS
+      </span>
+      <h2 className="indent-[-0.05em] font-mono text-7xl font-bold tracking-tighter text-landing-primary">HEADING</h2>
       <p>Focus on how it helps user instead of what features it has</p>
     </Section>
   );
@@ -146,9 +148,11 @@ function BenefitsSection() {
 function HowItWorksSection() {
   return (
     <Section id="how-it-works" className="bg-landing-primary">
-      <span className="mb-2 bg-landing-background px-2 py-0.5 font-mono text-landing-primary tabular-nums">02</span>
-      <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-background">
-        HOW IT WORKS SECTION
+      <span className="mb-2 inline-block bg-background px-2 py-1.5 font-mono leading-none text-landing-primary uppercase tabular-nums">
+        02 &gt;&gt; HOW IT WORKS
+      </span>
+      <h2 className="indent-[-0.05em] font-mono text-7xl font-bold tracking-tighter text-landing-background">
+        HEADING
       </h2>
       <p>Explain how to get started in 3 simple steps</p>
       <ol className="grid">
@@ -172,7 +176,10 @@ function HowItWorksSection() {
 function PricingSection() {
   return (
     <Section id="pricing">
-      <h2>Pricing Section</h2>
+      <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+        03 &gt;&gt; PRICING
+      </span>
+      <h2 className="indent-[-0.05em] font-mono text-7xl font-bold tracking-tighter text-landing-primary">HEADING</h2>
     </Section>
   );
 }
@@ -180,7 +187,10 @@ function PricingSection() {
 function TestimonialsSection() {
   return (
     <Section id="testimonials">
-      <h2>Testimonials Section</h2>
+      <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+        04 &gt;&gt; TESTIMONIALS
+      </span>
+      <h2 className="indent-[-0.05em] font-mono text-7xl font-bold tracking-tighter text-landing-primary">HEADING</h2>
     </Section>
   );
 }
@@ -188,11 +198,10 @@ function TestimonialsSection() {
 function FAQSection() {
   return (
     <Section id="faq">
-      <span className="bg-landing-primary px-2 py-0.5 font-mono text-landing-background tabular-nums">05</span>
-      <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-primary *:block">
-        <span>FAQ</span>
-        <span className="text-base font-normal tracking-normal text-muted-foreground">Frequently asked questions</span>
-      </h2>
+      <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+        05 &gt;&gt; FREQUENTLY ASKED QUESTIONS
+      </span>
+      <h2 className="indent-[-0.05em] font-mono text-7xl font-bold tracking-tighter text-landing-primary">INTEL</h2>
       <Accordion items={ACCORDION_ITEMS} />
     </Section>
   );
