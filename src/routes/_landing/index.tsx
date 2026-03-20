@@ -3,6 +3,7 @@ import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
 import { Section } from "@/components/landing/Section";
 import { Button } from "@/components/shadcnui/button";
+import Accordion from "@/components/landing/Accordion";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -114,10 +115,17 @@ function HeroSection() {
             muted
             playsInline
             aria-label="Scanning animation of a dithered circular glyph"
-            className="absolute inset-0 size-full overflow-visible object-cover invert dark:invert-0"
+            className="absolute inset-0 size-full overflow-visible object-cover invert motion-reduce:hidden dark:invert-0"
             poster="/assets/images/hero-poster.webp">
             <source src="/assets/videos/hero-video.webm" type="video/webm" />
           </video>
+          <img
+            src="/assets/images/hero-poster.webp"
+            alt=""
+            decoding="async"
+            fetchPriority="high"
+            className="absolute inset-0 hidden size-full object-cover invert motion-reduce:block dark:invert-0"
+          />
         </div>
       </div>
       <PartnersTicker />
@@ -180,10 +188,47 @@ function TestimonialsSection() {
 function FAQSection() {
   return (
     <Section id="faq">
-      <h2>FAQ Section</h2>
+      <span className="bg-landing-primary px-2 py-0.5 font-mono text-landing-background tabular-nums">05</span>
+      <h2 className="indent-[-0.05em] text-7xl font-bold tracking-tighter text-landing-primary *:block">
+        <span>FAQ</span>
+        <span className="text-base font-normal tracking-normal text-muted-foreground">Frequently asked questions</span>
+      </h2>
+      <Accordion items={ACCORDION_ITEMS} />
     </Section>
   );
 }
+const ACCORDION_ITEMS = [
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+  },
+  {
+    title: "Ut enim ad minim veniam, quis nostrud exercitation ullamco?",
+    content:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    title: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem?",
+    content:
+      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+  },
+  {
+    title: "At vero eos et accusamus et iusto odio dignissimos ducimus?",
+    content:
+      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+  },
+  {
+    title: "Temporibus autem quibusdam et aut officiis debitis aut rerum?",
+    content:
+      "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+  },
+  {
+    title: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet?",
+    content:
+      "Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+  },
+];
 
 function CTASection() {
   return (
