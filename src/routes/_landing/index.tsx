@@ -135,7 +135,7 @@ function HeroSection() {
 
 function BenefitsSection() {
   return (
-    <Section id="benefits" label="01 &gt;&gt; BENEFITS" heading="BENEFITS HEADING">
+    <Section id="benefits" label="01 / BENEFITS" heading="BENEFITS HEADING">
       <p className="text-muted-foreground">Focus on how it helps user instead of what features it has.</p>
     </Section>
   );
@@ -143,7 +143,7 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   return (
-    <Section id="how-it-works" variant="primary" label="02 &gt;&gt; HOW IT WORKS" heading="HOW IT WORKS HEADING">
+    <Section id="how-it-works" variant="primary" label="02 / HOW IT WORKS" heading="HOW IT WORKS HEADING">
       <p className="text-muted-foreground">Explain how to get started in 3 simple steps.</p>
     </Section>
   );
@@ -151,7 +151,7 @@ function HowItWorksSection() {
 
 function PricingSection() {
   return (
-    <Section id="pricing" label="03 &gt;&gt; PRICING" heading="PRICING HEADING">
+    <Section id="pricing" label="03 / PRICING" heading="PRICING HEADING">
       <p className="text-muted-foreground">
         Helps users choose by showcasing difference in plans, don't hide anything. Add CTA to all plans and highlight
         the middle plan to guide users.
@@ -162,18 +162,26 @@ function PricingSection() {
 
 function TestimonialsSection() {
   return (
-    <Section id="testimonials" label="04 &gt;&gt; TESTIMONIALS" heading="TESTIMONIALS HEADING">
+    <Section id="testimonials" label="04 / TESTIMONIALS" heading="TESTIMONIALS HEADING">
       <p className="text-muted-foreground">
         Place next to pricing to help with conversions. People feel relieved to see other people happy with their
         purchase.
       </p>
+      <div className="grid grid-cols-3">
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+      </div>
     </Section>
   );
 }
 
 function FAQSection() {
   return (
-    <Section id="faq" label="05 &gt;&gt; FREQUENTLY ASKED QUESTIONS" heading="FAQ HEADING">
+    <Section id="faq" label="05 / FREQUENTLY ASKED QUESTIONS" heading="FAQ HEADING">
       <p className="mb-2 text-wrap text-muted-foreground">
         Can't find what you're looking for?{" "}
         <Link
@@ -221,7 +229,7 @@ const ACCORDION_ITEMS = [
 
 function CTASection() {
   return (
-    <Section id="cta" label="06 &gt;&gt; CTA" heading="CTA Heading">
+    <Section id="cta" label="06 / CTA" heading="CTA Heading">
       <p className="text-muted-foreground">Highlight it, make it stand out.</p>
     </Section>
   );
