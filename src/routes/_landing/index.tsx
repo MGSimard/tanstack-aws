@@ -1,7 +1,6 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
-import { Section } from "@/components/landing/Section";
 import { Button } from "@/components/shadcnui/button";
 import Accordion from "@/components/landing/Accordion";
 
@@ -135,63 +134,103 @@ function HeroSection() {
 
 function BenefitsSection() {
   return (
-    <Section id="benefits" label="01 / BENEFITS" heading="BENEFITS HEADING">
-      <p className="text-muted-foreground">Focus on how it helps user instead of what features it has.</p>
-    </Section>
+    <section id="benefits" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          01 / BENEFITS
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          BENEFITS HEADING
+        </h2>
+        <p className="text-muted-foreground">Focus on how it helps user instead of what features it has.</p>
+      </div>
+    </section>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <Section id="how-it-works" variant="primary" label="02 / HOW IT WORKS" heading="HOW IT WORKS HEADING">
-      <p className="text-muted-foreground">Explain how to get started in 3 simple steps.</p>
-    </Section>
+    <section id="how-it-works" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          02 / HOW IT WORKS
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          HOW IT WORKS HEADING
+        </h2>
+        <p className="text-muted-foreground">Explain how to get started in 3 simple steps.</p>
+      </div>
+    </section>
   );
 }
 
 function PricingSection() {
   return (
-    <Section id="pricing" label="03 / PRICING" heading="PRICING HEADING">
-      <p className="text-muted-foreground">
-        Helps users choose by showcasing difference in plans, don't hide anything. Add CTA to all plans and highlight
-        the middle plan to guide users.
-      </p>
-    </Section>
+    <section id="pricing" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          03 / PRICING
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          PRICING HEADING
+        </h2>
+        <p className="text-muted-foreground">
+          Helps users choose by showcasing difference in plans, don't hide anything. Add CTA to all plans and highlight
+          the middle plan to guide users.
+        </p>
+      </div>
+    </section>
   );
 }
 
 function TestimonialsSection() {
   return (
-    <Section id="testimonials" label="04 / TESTIMONIALS" heading="TESTIMONIALS HEADING">
-      <p className="text-muted-foreground">
-        Place next to pricing to help with conversions. People feel relieved to see other people happy with their
-        purchase.
-      </p>
-      <div className="grid grid-cols-3">
-        <div>Test</div>
-        <div>Test</div>
-        <div>Test</div>
-        <div>Test</div>
-        <div>Test</div>
-        <div>Test</div>
+    <section id="testimonials" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          04 / TESTIMONIALS
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          TESTIMONIALS HEADING
+        </h2>
+        <p className="text-muted-foreground">
+          Place next to pricing to help with conversions. People feel relieved to see other people happy with their
+          purchase.
+        </p>
+        <div className="grid grid-cols-3">
+          <div>Test</div>
+          <div>Test</div>
+          <div>Test</div>
+          <div>Test</div>
+          <div>Test</div>
+          <div>Test</div>
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
 
 function FAQSection() {
   return (
-    <Section id="faq" label="05 / FREQUENTLY ASKED QUESTIONS" heading="FAQ HEADING">
-      <p className="mb-2 text-wrap text-muted-foreground">
-        Can't find what you're looking for?{" "}
-        <Link
-          to="/"
-          className="font-mono text-xs font-medium tracking-widest whitespace-nowrap underline hover:text-landing-primary focus-visible:text-landing-primary">
-          CONTACT US &gt;&gt;&gt;
-        </Link>
-      </p>
-      <Accordion items={ACCORDION_ITEMS} />
-    </Section>
+    <section id="faq" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          05 / FREQUENTLY ASKED QUESTIONS
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          FAQ HEADING
+        </h2>
+        <p className="mb-2 text-wrap text-muted-foreground">
+          Can't find what you're looking for?{" "}
+          <Link
+            to="/"
+            className="font-mono text-xs font-medium tracking-widest whitespace-nowrap underline hover:text-landing-primary focus-visible:text-landing-primary">
+            CONTACT US &gt;&gt;&gt;
+          </Link>
+        </p>
+        <Accordion items={ACCORDION_ITEMS} />
+      </div>
+    </section>
   );
 }
 const ACCORDION_ITEMS = [
@@ -229,8 +268,16 @@ const ACCORDION_ITEMS = [
 
 function CTASection() {
   return (
-    <Section id="cta" label="06 / CTA" heading="CTA Heading">
-      <p className="text-muted-foreground">Highlight it, make it stand out.</p>
-    </Section>
+    <section id="cta" className="scroll-mt-16 px-6 py-16 md:px-8">
+      <div className="mx-auto w-full max-w-360">
+        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
+          06 / CTA
+        </span>
+        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
+          CTA Heading
+        </h2>
+        <p className="text-muted-foreground">Highlight it, make it stand out.</p>
+      </div>
+    </section>
   );
 }
