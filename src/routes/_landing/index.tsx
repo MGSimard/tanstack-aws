@@ -3,6 +3,7 @@ import { FragmentedGradient } from "@/components/landing/FragmentedGradient";
 import { PartnersTicker } from "@/components/landing/PartnersTicker";
 import { Button } from "@/components/shadcnui/button";
 import Accordion from "@/components/landing/Accordion";
+import { Section, HeadingLabel, Heading } from "@/components/landing/SectionPrimitives";
 
 export const Route = createFileRoute("/_landing/")({
   component: PageHome,
@@ -86,65 +87,49 @@ function HeroSection() {
 
 function BenefitsSection() {
   return (
-    <section id="benefits" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="benefits">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          01 / BENEFITS
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          BENEFITS HEADING
-        </h2>
+        <HeadingLabel label="01 / BENEFITS" />
+        <Heading heading="BENEFITS HEADING" />
         <p className="text-muted-foreground">Focus on how it helps user instead of what features it has.</p>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="how-it-works">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          02 / HOW IT WORKS
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          HOW IT WORKS HEADING
-        </h2>
+        <HeadingLabel label="02 / HOW IT WORKS" />
+        <Heading heading="HOW IT WORKS HEADING" />
         <p className="text-muted-foreground">Explain how to get started in 3 simple steps.</p>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function PricingSection() {
   return (
-    <section id="pricing" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="pricing">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          03 / PRICING
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          PRICING HEADING
-        </h2>
+        <HeadingLabel label="03 / PRICING" />
+        <Heading heading="PRICING HEADING" />
         <p className="text-muted-foreground">
           Helps users choose by showcasing difference in plans, don't hide anything. Add CTA to all plans and highlight
           the middle plan to guide users.
         </p>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function TestimonialsSection() {
   return (
-    <section id="testimonials" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="testimonials">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          04 / TESTIMONIALS
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          TESTIMONIALS HEADING
-        </h2>
+        <HeadingLabel label="04 / TESTIMONIALS" />
+        <Heading heading="TESTIMONIALS HEADING" />
         <p className="text-muted-foreground">
           Place next to pricing to help with conversions. People feel relieved to see other people happy with their
           purchase.
@@ -158,20 +143,16 @@ function TestimonialsSection() {
           <div>Test</div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
 function FAQSection() {
   return (
-    <section id="faq" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="faq">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          05 / FREQUENTLY ASKED QUESTIONS
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          FAQ HEADING
-        </h2>
+        <HeadingLabel label="05 / FREQUENTLY ASKED QUESTIONS" />
+        <Heading heading="FAQ HEADING" />
         <p className="mb-2 text-wrap text-muted-foreground">
           Can't find what you're looking for?{" "}
           <Link
@@ -182,7 +163,7 @@ function FAQSection() {
         </p>
         <Accordion items={ACCORDION_ITEMS} />
       </div>
-    </section>
+    </Section>
   );
 }
 const ACCORDION_ITEMS = [
@@ -220,16 +201,12 @@ const ACCORDION_ITEMS = [
 
 function CTASection() {
   return (
-    <section id="cta" className="scroll-mt-16 px-6 py-16 md:px-8">
+    <Section id="cta">
       <div className="mx-auto w-full max-w-360">
-        <span className="mb-2 inline-block bg-landing-primary px-2 py-1.5 font-mono leading-none text-landing-background uppercase tabular-nums">
-          06 / CTA
-        </span>
-        <h2 className="mb-8 indent-[-0.05em] font-mono text-[clamp(2rem,6vw,4rem)]/tight font-bold tracking-tighter text-landing-primary">
-          CTA Heading
-        </h2>
+        <HeadingLabel label="06 / CTA" />
+        <Heading heading="CTA Heading" />
         <p className="text-muted-foreground">Highlight it, make it stand out.</p>
       </div>
-    </section>
+    </Section>
   );
 }
