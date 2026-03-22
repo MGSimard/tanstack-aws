@@ -1,8 +1,9 @@
+// Insanely good looking pixel noise, but can't use because engineers working on firefox rendering are Bronze 5
+
 export function LandingNoise() {
-  // TODO: Decide hierarchy / z-index
   return (
     <svg
-      className="pointer-events-none absolute inset-0 z-10 block size-full overflow-hidden opacity-10 select-none"
+      className="pointer-events-none absolute inset-0 z-10 block size-full translate-z-0 overflow-hidden opacity-10 select-none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
       aria-hidden>
