@@ -31,7 +31,7 @@ function SeparatorRow() {
 
 function HeroSection() {
   return (
-    <section className="flex min-h-dvh flex-col">
+    <section className="flex min-h-dvh flex-col overflow-hidden">
       <div className="mx-auto grid w-full max-w-400 grow grid-cols-1 [grid-template-areas:'stack'] *:[grid-area:stack] xl:grid-cols-[min(45%,48rem)_minmax(0,1fr)] *:xl:[grid-area:unset]">
         <div className="self-center px-12 py-32 text-center md:px-16 xl:text-start">
           <span className="mx-auto mb-2 block w-fit bg-landing-primary px-2 py-0.5 font-mono text-landing-background xl:mx-0 *:xl:text-shadow-none">
