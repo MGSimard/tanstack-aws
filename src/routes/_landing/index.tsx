@@ -19,9 +19,14 @@ function PageHome() {
       <PricingSection />
       <TestimonialsSection />
       <FAQSection />
+      <SeparatorRow />
       <CTASection />
     </>
   );
+}
+
+function SeparatorRow() {
+  return <div className="bg-slashed h-24"></div>;
 }
 
 function HeroSection() {

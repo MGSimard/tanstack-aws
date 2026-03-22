@@ -261,6 +261,20 @@
   }
 }
 
+@layer utilities {
+  .bg-slashed {
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--border) 0,
+      var(--border) 1px,
+      transparent 0,
+      transparent 50%
+    );
+    background-size: 0.75rem 0.75rem;
+    background-clip: padding-box;
+  }
+}
+
 @layer animations {
   @keyframes ticker {
     0% {
