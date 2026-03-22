@@ -20,7 +20,7 @@ function LayoutLanding() {
       </main>
       <Footer />
       <div
-        className="pointer-events-none absolute inset-0 z-10 size-full bg-[url('/assets/images/noise.webp')] bg-repeat opacity-10 select-none"
+        className="pointer-events-none absolute inset-0 z-10 size-full bg-[url('/assets/images/noise.webp')] bg-repeat opacity-[0.075] select-none"
         aria-hidden
       />
       {/* <LandingNoise /> Can't use because firefox rendering is a fucking joke */}
