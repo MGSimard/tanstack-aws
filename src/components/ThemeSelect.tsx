@@ -22,7 +22,12 @@ export function ThemeSelect() {
       }}>
       <TooltipTrigger
         render={
-          <Button type="button" size="icon" variant="ghost" onClick={() => setTheme(NEXT_THEME[theme])}>
+          <Button
+            type="button"
+            size="icon"
+            variant="ghost"
+            className="rounded-none"
+            onClick={() => setTheme(NEXT_THEME[theme])}>
             <span className="grid [grid-template-areas:'stack']">
               <IconBrightnessDown data-theme-icon="light" className="[grid-area:stack]" />
               <IconMoonFilled data-theme-icon="dark" className="[grid-area:stack]" />

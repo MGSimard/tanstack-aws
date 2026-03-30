@@ -26,23 +26,11 @@ export function Header() {
           isScrolled && "border-border bg-landing-background shadow-black/10"
         )}>
         <nav className="mx-auto flex h-16 max-w-400 items-center gap-12">
-          <ul className="flex items-center gap-8 font-light [&_a]:hover:underline [&_a]:focus-visible:underline">
-            <li>
-              <Link to="/">
-                <WordMark />
-              </Link>
-            </li>
-            <li className="hidden md:block">
-              <Link to="/">FEATURES</Link>
-            </li>
-            <li className="hidden md:block">
-              <Link to="/">PRICING</Link>
-            </li>
-            <li className="hidden md:block">
-              <Link to="/">CONTACT</Link>
-            </li>
-          </ul>
-          <div className="ml-auto flex items-center gap-4">
+          <Link to="/">
+            <WordMark />
+          </Link>
+
+          <div className="ml-auto flex shrink-0 items-center gap-4 *:shrink-0">
             <ThemeSelect />
             <Button
               variant="outline"

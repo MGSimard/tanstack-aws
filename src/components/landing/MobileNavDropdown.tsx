@@ -6,7 +6,6 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/shadcnui/dropdown-menu";
 import { IconMenu2 } from "@tabler/icons-react";
@@ -16,7 +15,7 @@ export function MobileNavDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger
         render={
-          <Button variant="outline" size="icon" className="rounded-none md:hidden" aria-label="Navigation Menu">
+          <Button variant="outline" size="icon" className="rounded-none" aria-label="Navigation Menu">
             <IconMenu2 />
           </Button>
         }
