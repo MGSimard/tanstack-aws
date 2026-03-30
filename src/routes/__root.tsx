@@ -3,10 +3,18 @@ import type { QueryClient } from "@tanstack/react-query";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools";
-import appCss from "@/css/global.css?url";
-import fontsCss from "@/css/fonts.css?url";
-import { SITE_TITLE } from "@/lib/consts";
 import { TooltipProvider } from "@/components/shadcnui/tooltip";
+import {
+  configLinks,
+  configMeta,
+  favIcons,
+  fontPreloads,
+  mediaPreloads,
+  misc,
+  openGraph,
+  styles,
+  twitter,
+} from "@/lib/head";
 
 interface MyRouterContext {
   queryClient: QueryClient;
@@ -16,28 +24,8 @@ const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getIte
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   head: () => ({
-    meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: SITE_TITLE,
-      },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "stylesheet",
-        href: fontsCss,
-      },
-    ],
+    meta: [...configMeta, ...openGraph, ...twitter, ...misc],
+    links: [...configLinks, ...favIcons, ...fontPreloads, ...mediaPreloads, ...styles],
   }),
   shellComponent: RootDocument,
 });
