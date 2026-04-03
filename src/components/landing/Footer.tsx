@@ -46,13 +46,13 @@ export function Footer() {
               <h2 className="mb-2 font-mono uppercase tabular-nums">PRODUCTS</h2>
               <ul className="space-y-2 capitalize [&_a]:hover:underline [&_a]:focus-visible:underline">
                 <li>
-                  <Link to="/">Product 1</Link>
+                  <Link to="/">Number One</Link>
                 </li>
                 <li>
-                  <Link to="/">Product 2</Link>
+                  <Link to="/">Second Thing</Link>
                 </li>
                 <li>
-                  <Link to="/">Product 3</Link>
+                  <Link to="/">Third Item</Link>
                 </li>
               </ul>
             </div>
@@ -60,13 +60,13 @@ export function Footer() {
               <h2 className="mb-2 font-mono uppercase">SUPPORT</h2>
               <ul className="space-y-2 capitalize [&_a]:hover:underline [&_a]:focus-visible:underline">
                 <li>
-                  <Link to="/">Support 1</Link>
+                  <Link to="/">Help Center</Link>
                 </li>
                 <li>
-                  <Link to="/">Support 2</Link>
+                  <Link to="/">Customer Support</Link>
                 </li>
                 <li>
-                  <Link to="/">Support 3</Link>
+                  <Link to="/">Status Tracking</Link>
                 </li>
               </ul>
             </div>
