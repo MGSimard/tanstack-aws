@@ -1,7 +1,7 @@
 import { Outlet, createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { LandingNoise } from "@/components/landing/LandingNoise";
+// import { LandingNoise } from "@/components/landing/LandingNoise";
 
 export const Route = createFileRoute("/_landing")({
   component: LayoutLanding,
