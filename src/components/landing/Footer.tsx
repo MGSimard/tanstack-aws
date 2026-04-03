@@ -18,7 +18,7 @@ export function Footer() {
             <div className="col-span-full w-fit lg:col-span-1">
               <WordMark className="mb-8" aria-label="KEYSTONE Logo" />
               <ul
-                className="flex flex-wrap items-center justify-between gap-4 *:shrink-0 [&_a]:hover:opacity-90 [&_a]:focus-visible:opacity-90"
+                className="flex flex-wrap items-center justify-between gap-4 *:shrink-0 [&_a]:hover:text-primary [&_a]:focus-visible:text-primary"
                 aria-label="Socials">
                 <li>
                   <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
