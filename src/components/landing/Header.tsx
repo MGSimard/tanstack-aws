@@ -51,6 +51,7 @@ export function Header() {
             </Button>
             <DropdownMenu>
               <DropdownMenuTrigger
+                openOnHover
                 render={
                   <Button variant="outline" size="icon" className="rounded-none" aria-label="Navigation Menu">
                     <IconMenu2 />
@@ -60,9 +61,9 @@ export function Header() {
               <DropdownMenuContent className="rounded-none **:rounded-none">
                 <DropdownMenuGroup className="space-y-2">
                   <DropdownMenuLabel>NAVIGATION</DropdownMenuLabel>
-                  <DropdownMenuItem>FEATURES</DropdownMenuItem>
-                  <DropdownMenuItem>PRICING</DropdownMenuItem>
-                  <DropdownMenuItem>CONTACT</DropdownMenuItem>
+                  <DropdownMenuItem render={<Link to="/" />}>FEATURES</DropdownMenuItem>
+                  <DropdownMenuItem render={<Link to="/" />}>PRICING</DropdownMenuItem>
+                  <DropdownMenuItem render={<Link to="/" />}>CONTACT</DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
