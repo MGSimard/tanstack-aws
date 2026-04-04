@@ -1,5 +1,4 @@
 import { THEMES, type Theme, useTheme } from "@/components/ThemeProvider";
-import { Button } from "@/components/shadcnui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
