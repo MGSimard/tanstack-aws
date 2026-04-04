@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { ThemeSelect } from "@/components/ThemeSelect";
 import { Separator } from "@/components/shadcnui/separator";
 import { WordMark } from "@/components/BrandIcons";
 import {
@@ -100,6 +101,9 @@ export function Footer() {
                   className="hover:text-foreground hover:underline focus-visible:text-foreground focus-visible:underline">
                   Cookie Settings
                 </button>
+              </li>
+              <li>
+                <ThemeSelect />
               </li>
             </ul>
             <div className="font-mono text-xs text-muted uppercase">

@@ -256,7 +256,8 @@
     max-width: 100%;
   }
   button:not(:disabled),
-  [role="menuitem"]:not(:disabled) {
+  [role="menuitem"]:not(:disabled),
+  [role="menuitemradio"]:not(:disabled) {
     cursor: pointer;
   }
 }
