@@ -56,7 +56,7 @@ export function Header() {
                   </Button>
                 }
               />
-              <DropdownMenuContent className="rounded-none **:rounded-none">
+              <DropdownMenuContent className="rounded-none **:rounded-none" align="end">
                 <DropdownMenuGroup className="space-y-2">
                   <DropdownMenuLabel>NAVIGATION</DropdownMenuLabel>
                   <DropdownMenuItem render={<Link to="/" />}>FEATURES</DropdownMenuItem>
